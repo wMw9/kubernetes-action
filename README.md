@@ -19,11 +19,11 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Trigger deploy
-        uses: Consensys/kubernetes-action@master
+        uses: wMw9/kubernetes-action@master
         env:
           KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
         with:
-          args: apply deployment.yaml
+          args: apply -f path/to/deployment.yaml
 ```
 
 ## Config
